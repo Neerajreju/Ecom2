@@ -1,0 +1,82 @@
+{% extends 'app/base.html' %}
+{#this means that the all content in the base.html will be used in this also#}
+
+{#now loading the static class#}
+
+{% load static %}
+{% block title %}title{% endblock %}
+
+{% block banner-slider %}
+{#    #}
+<div id="carouselExampleFade" class="carousel slide carousel-fade" style="height: 25%">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/banner/b1.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/banner/b2.jpg'%}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/banner/b3.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+{% endblock banner-slider %}
+
+{% block products %}
+    <div class="container">
+    <h2 class="text-center">Dairy products</h2>
+    <div class="row">
+        <div class="col-md-3 product-card">
+            <a href="{% url 'category' 'CH'%}">
+            <img src="{% static 'images/products/kulfi.png' %}" alt="Pink Watch" class="fixed-size">
+            <h3 class="card-title">KULFI</h3>
+            <span class="item-price">$870</span>
+            </a>
+        </div>
+        <div class="col-md-3 product-card">
+            <a href="{% url 'category' 'ML' %}">
+            <img src="{% static 'images/products/tonemilk.png' %}" alt="Heavy Watch" class="fixed-size">
+            <h3 class="{% url 'category' 'ML' %}">tone milk</h3>
+            <span class="item-price">$680</span>
+            </a>
+        </div>
+        <div class="col-md-3 product-card">
+            <a href="{% url 'category' 'ML' %}">
+            <img src="{% static 'images/products/milk-shake-chocolate.png' %}" alt="Spotted Watch" class="fixed-size">
+            <h3 class="card-title">Chocolate milk shake</h3>
+            <span class="item-price">$750</span>
+            </a>
+        </div>
+        <div class="col-md-3 product-card">
+            <a href="{% url 'category' 'CH' %}">
+            <img src="{% static 'images/products/processedcheese.png' %}" alt="Black Watch" class="fixed-size">
+            <h3 class="card-title">Cheese</h3>
+            <span class="item-price">$650</span>
+            </a>
+{#            <a href="#" class="btn btn-cart">ADD TO CART<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>#}
+        </div>
+    </div>
+</div>
+
+<!-- Add your SVG sprite here -->
+<svg style="display: none;">
+    <symbol id="cart-outline" viewBox="0 0 24 24">
+        <path d="M6,18A1,1 0 1,0 6,20A1,1 0 0,0 6,18M1,2V4H2L5.6,11L4.25,13.04C4.09,13.32 4,13.65 4,14A2,2 0 0,0 6,16H19V14H6.42C6.28,14 6.17,13.89 6.17,13.75L6.2,13.67L7.1,12H14.55C15.3,12 15.96,11.58 16.3,10.97L20.88,3.97C20.96,3.82 21,3.66 21,3.5A1,1 0 0,0 20,2H5.21L4.27,0.79C4.1,0.54 3.8,0.39 3.5,0.39H1M18,18A1,1 0 1,0 18,20A1,1 0 0,0 18,18Z" />
+    </symbol>
+</svg>
+
+{% endblock %}
+
+{% block main-content %}
+    <h1>hey there site </h1>
+{% endblock main-content %}

@@ -1,0 +1,108 @@
+.product-card {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .fixed-size {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .item-price {
+            font-size: 1.1rem;
+            color: #3498db;
+        }
+
+        .btn-cart {
+            margin-top: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+        }
+
+        .btn-cart svg {
+            margin-left: 5px;
+        }
+
+.gradient-background {
+  background: linear-gradient(300deg, #00bfff, #ff4ce7, #efc372);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Define a new class */
+.custom-style {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.custom-style h1 {
+    margin-top: 50px;
+}
+.custom-style p {
+    color: green;
+    font-weight: bold;
+}
+.custom-style a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+.custom-style form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.custom-style label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.custom-style input,
+.custom-style textarea {
+    width: 300px;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.custom-style button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #1ab0a9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.custom-style button:hover {
+    background-color: #147c75;
+}
